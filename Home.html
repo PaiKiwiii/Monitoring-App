@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <!-- Flowbite CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@1.0.0-alpha/dist/flowbite.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #F8F8FB;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .login-container {
+            box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            padding: 40px;
+            background-color: #E1EFFF;
+            width: 400px;
+        }
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .logo-container img {
+            max-width: 150px;
+            height: auto;
+        }
+        .form-label {
+            display: block;
+            margin-bottom: 6px;
+        }
+        .form-input {
+            width: 100%;
+            padding: 8px;
+            font-size: 16px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+        .btn-primary {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 4px;
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+        .form-item {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="login-container">
+            <!-- Logo Container -->
+            <div class="logo-container">
+
+                <img src="/images/Green_Nature_Logo__1_-removebg-preview (1) 2.png" alt="Company Logo">
+            </div>
+            <!-- Sign-up Form -->
+            <h2 class="mb-4 text-center">Login to your Account</h2>
+            <form id="loginForm" onsubmit="return validateForm()">
+                <div class="form-item">
+                    <label for="email" class="form-label">Username</label>
+                    <input type="text" class="form-input" id="username" aria-describedby="emailHelp">
+                </div>
+                <div class="form-item">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" class="form-input" id="password">
+                </div>
+                <div class="form-item">
+                    <button type="submit" class="btn btn-primary">Log in</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- Flowbite Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@1.0.0-alpha/dist/flowbite.bundle.js"></script>
+    <script>
+        function validateForm() {
+            // Hardcoded username and password
+            var username = "admin";
+            var password = "password";
+
+            // Retrieve input values
+            var inputUsername = document.getElementById("username").value;
+            var inputPassword = document.getElementById("password").value;
+
+            // Validate credentials
+            if (inputUsername === username && inputPassword === password) {
+                // Redirect to dashboard.html
+                window.location.href = "dashboard.html";
+                return false; // Prevent form submission
+            } else {
+                // Display error message or handle invalid credentials
+                alert("Invalid username or password!");
+                return false; // Prevent form submission
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Login</title>
+
+    <!-- Flowbite CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet"/>
+    <style>
+        body {
+            background-color: #F8F8FB;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .login-container {
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            padding: 40px;
+            background-color: #E1EFFF;
+            width: 400px;
+        }
+
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .logo-container img {
+            max-width: 150px;
+            height: auto;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 6px;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 8px;
+            font-size: 16px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+
+        .btn-primary {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 4px;
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+
+        .form-item {
+            margin-bottom: 20px;
+        }
+    </style>
+    <script src="./js/firebase_app.js" type="module"></script>
+
+</head>
+<body>
+<div class="container flex justify-center">
+    <div class="login-container">
+        <!-- Logo Container -->
+        <div class="logo-container">
+
+            <img alt="Company Logo" src="./Green_Nature_Logo__1_-removebg-preview%20(1)%202.png">
+        </div>
+        <!-- Sign-up Form -->
+        <h2 class="mb-4 text-center">Login to your Account</h2>
+        <form id="loginForm" onsubmit="login">
+            <div class="form-item">
+                <label class="form-label" for="email">Username</label>
+                <input aria-describedby="emailHelp" class="form-input" id="email" type="text">
+            </div>
+            <div class="form-item">
+                <label class="form-label" for="password">Password</label>
+                <input class="form-input" id="password" type="password">
+            </div>
+            <div class="form-item">
+                <button class="btn btn-primary" type="submit">Log in</button>
+            </div>
+        </form>
+    </div>
+</div>
+<!-- Flowbite Bundle -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+</body>
+</html>
